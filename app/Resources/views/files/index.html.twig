@@ -2,45 +2,53 @@
 
 {% block body %}
 
-{% for events in events %}
-
 <section class="row d-flex justify-content-around m-1">
-  <div class='afe text-justify col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 col-12 bg-white shadow-lg rounded-lg m-1'>
+
+  <div class="col-12 m-4 text-dark text-center">
+      <div class="h2 text-white letters">Events</div>
+  </div>
+{% for events in events %}
+  <div class='text-justify col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12 bg-white shadow-lg rounded-lg m-1'>
         
         <div class='row'>
-          <div class='col text-dark text-monospace text-center '>
-            <p class='h5'>Event</p>
-            <p>{{events.name}}</p>
+          <div class='col text-dark text-center'>
+            <p>Event:</p>
+            <p class="h5">{{events.name}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Type</p>
-            <p>{{events.type}}</p>
+          <div class='col text-dark text-center'>
+            <p>Type:</p>
+            <p class="h5">{{events.type}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Place picture</p>
-            <img src="{{events.image}}" width="150" height="150">
+          <div class='col text-dark text-center'>
+              <img class="image-fluid rounded" src="{{events.image}}" >
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Time</p>
-            <p>{{events.dateTime|date('F j, Y, g:i a')}}</p>
-              <p>{{events.address}}</p>
+          <div class='col text-dark text-center'>
+            <p>Date and Time:</p>
+            <p class="h5">{{events.dateTime|date('F j, Y, g:i a')}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
+          <div class='col text-dark text-center'>
+            <p>Location:</p>
+            <p class="h5">{{events.address}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-center mb-3'>
               <a href="/view/{{events.id}}" class="btn btn-success">View</a>
           </div>
         </div>
-    </div>
-  </section>
-  {% endfor %}
 
+    </div>
+  
+  {% endfor %}
+</section>
 {% endblock %}
 
 

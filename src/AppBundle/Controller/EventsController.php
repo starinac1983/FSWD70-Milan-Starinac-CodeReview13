@@ -30,7 +30,7 @@ class EventsController extends Controller
 
         $form = $this->createFormBuilder($newevent)
         ->add('name', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('type', ChoiceType::class, array('choices'=>array('Music'=>'Music', 'Sport'=>'Sport', 'Theather'=>'Theather', 'Movie'=>'Movie'),'attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
+        ->add('type', ChoiceType::class, array('choices'=>array('Music'=>'Music', 'Sport'=>'Sport', 'Theater'=>'Theater', 'Movie'=>'Movie'),'attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
         ->add('description', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
         ->add('image', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
         ->add('email', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
@@ -96,16 +96,16 @@ class EventsController extends Controller
             
         $form = $this->createFormBuilder($event)
         ->add('name', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('type', ChoiceType::class, array('choices'=>array('Music'=>'Music', 'Sport'=>'Sport', 'Theather'=>'Theather', 'Movie'=>'Movie'),'attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
-        ->add('description', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('image', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('email', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('phone', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('address', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('url', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('capacity', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-        ->add('dateTime', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-        ->add('save', SubmitType::class, array('label'=> 'Update Todo', 'attr' => array('class'=> 'btn-primary', 'style'=>'margin-botton:15px')))
+        ->add('type', ChoiceType::class, array('choices'=>array('Music'=>'Music', 'Sport'=>'Sport', 'Theater'=>'Theater', 'Movie'=>'Movie'),'attr' => array('class'=> 'form-control', 'style'=>'margin-botton:5px')))
+        ->add('description', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:5px')))
+        ->add('image', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:5px')))
+        ->add('email', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:5px')))
+        ->add('phone', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:5px')))
+        ->add('address', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:5px')))
+        ->add('url', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:5px')))
+        ->add('capacity', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:5px')))
+        ->add('dateTime', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:5px')))
+        ->add('save', SubmitType::class, array('label'=> 'Update', 'attr' => array('class'=> 'btn-primary', 'style'=>'margin-botton:5px')))
         ->getForm();
 
         $form->handleRequest($request);

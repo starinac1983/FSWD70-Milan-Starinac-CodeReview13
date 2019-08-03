@@ -1,70 +1,74 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 <section class="row d-flex justify-content-around m-1">
-	<div class='text-justify col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 col-12 bg-white shadow-lg rounded-lg m-1'>
+
+  <div class="col-12 m-4 text-dark text-center">
+      <div class="h2 text-white letters">View Event</div>
+  </div>
+
+	<div class='text-justify col-xl-4 col-lg-4 col-md-4 col-sm-8 col-xs-12 col-12 bg-white shadow-lg rounded-lg m-1'>
         
-        <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Place picture</p>
-            <img class="image-fluid" src="{{events.image}}" width="300" height="300">
+        <div class='row m-1'>
+          <div class='col text-dark text-center'>
+            <img class="image-fluid rounded" src="{{events.image}}" width="300" height="300">
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace mt-2 text-center '>
-            <p class='h5'>Event</p>
-            <p>{{events.name}}</p>
+          <div class='col text-dark mt-2 text-center'>
+            <p>Event:</p>
+            <p class='h5'>{{events.name}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center '>
-            <p class='h5'>Type</p>
-            <p>{{events.type}}</p>
+          <div class='col text-dark text-center'>
+            <p>Type:</p>
+            <p class='h5'>{{events.type}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Description</p>
-            <p>{{events.description}}</p>
+          <div class='col text-dark text-center'>
+            <p>Description:</p>
+            <p class='h5'>{{events.description}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>E-mail</p>
-            <p>{{events.email}}</p>
+          <div class='col text-dark text-center'>
+            <p>E-mail:</p>
+            <p class='h5'>{{events.email}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Phone</p>
-            <p>{{events.phone}}</p>
+          <div class='col text-dark text-center'>
+            <p>Phone:</p>
+            <p class='h5'>{{events.phone}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Address</p>
-            <p>{{events.address}}</p>
+          <div class='col text-dark text-center'>
+            <p>Address:</p>
+            <p class='h5'>{{events.address}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Capacity</p>
-            <p>{{events.capacity}}</p>
+          <div class='col text-dark text-center'>
+            <p>Capacity:</p>
+            <p class='h5'>{{events.capacity}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Website</p>
-            <p><a href="{{events.url}}">{{events.url}}</a></p>
+          <div class='col text-dark text-center'>
+            <p>Website:</p>
+            <p class='h5'><a href="{{events.url}}">{{events.url}}</a></p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center ' >
-            <p class='h5'>Date and time</p>
-            <p>{{events.dateTime|date('F j, Y, g:i a')}}</p>
+          <div class='col text-dark text-center'>
+            <p>Date and time:</p>
+            <p class='h5'>{{events.dateTime|date('F j, Y, g:i a')}}</p>
           </div>
         </div>
         <div class='row'>
-          <div class='col text-dark text-monospace text-center mb-2' >
+          <div class='col text-dark text-center mb-2'>
             <a href="/edit/{{events.id}}" class="btn btn-success">Edit</a>
             <a href="/delete/{{events.id}}" class="btn btn-danger">Delete</a>
           </div>
