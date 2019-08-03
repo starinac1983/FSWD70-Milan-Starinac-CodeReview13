@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="row d-flex justify-content-around m-1">
+	<div class='text-justify col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 col-12 bg-white shadow-lg rounded-lg m-1'>
+        
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>Place picture</p>
+            <img class="image-fluid" src="{{events.image}}" width="300" height="300">
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace mt-2 text-center '>
+            <p class='h5'>Event</p>
+            <p>{{events.name}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center '>
+            <p class='h5'>Type</p>
+            <p>{{events.type}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>Description</p>
+            <p>{{events.description}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>E-mail</p>
+            <p>{{events.email}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>Phone</p>
+            <p>{{events.phone}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>Address</p>
+            <p>{{events.address}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>Capacity</p>
+            <p>{{events.capacity}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>Website</p>
+            <p><a href="{{events.url}}">{{events.url}}</a></p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center ' >
+            <p class='h5'>Date and time</p>
+            <p>{{events.dateTime|date('F j, Y, g:i a')}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col text-dark text-monospace text-center mb-2' >
+            <a href="/edit/{{events.id}}" class="btn btn-success">Edit</a>
+            <a href="/delete/{{events.id}}" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+    </div>
+  </section>
+
+{% endblock %}
